@@ -1,5 +1,6 @@
-let componentArr = ["Home", "Main", "Loan", "AllowInst", "Berejected", "Finalinstance", "SecondInstance", "FirstInstance", "ApplicationManage", "LimitsOfauth/index"]
-// 页面路由数组
+// 此处添加权限控制页面
+let componentArr = ["Home", "Main", "Loan", "AllowInst", "Berejected", "Finalinstance", "SecondInstance", "FirstInstance", "ApplicationManage", "LimitsOfauth/index","Applic_record/Applic_record"]
+// 页面路由数组 再此添加
 let routerArrAll = [
     {
         path: "/home",
@@ -60,6 +61,12 @@ let routerArrAll = [
                 icon: "user",
                 title: "权限管理",
                 component: "LimitsOfauth/index"
+            },{
+                path:"/Applic_record",
+                name:"Applic_record",
+                icon:"s-order",
+                title:"申请记录",
+                component:"Applic_record/Applic_record"
             }
         ]
     },

@@ -69,7 +69,7 @@ const findUser = (data, req, res) => {
                     // 拿到路由数据
                     // let resultObj = getDataByLimit(isRight.limit) // 根据权限等级获取
                     let resultObj = await getDataByLimit(data.username,isRight.limit)
-                    // console.log("resultObj",resultObj);
+                    // console.log(JSON.stringify(resultObj.routerArr));
                     return res.send(
                         {
                             code: 200,

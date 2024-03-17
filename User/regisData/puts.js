@@ -6,18 +6,19 @@ const Msg = require("../../msg/index.js")
 
 const tableName = 'regis'
 
-const columns = ['registration_record', 'user', 'submitDate']
-
 
 // 测试用数据
-let value = {
-    registration_record:'123',
-    user:"ikun",
-    submitDate:"2024-01-02"
-}
-function putFun(value,res) {
-    let sql = sqlFun(tableName,'insert',columns,value)
+// let value = {
+//     registration_record:'123',
+//     user:"ikun",
+//     submitDate:"2024-01-02"
+// }
 
+function putFun(value,res) {
+    // console.log(value);
+    let sql = sqlFun(tableName,'insert',Object.keys(value),Object.values(value))
+
+    // console.log(sql);
     // 数据库操作
     db.query(sql,(err,value)=>{
         if(err){

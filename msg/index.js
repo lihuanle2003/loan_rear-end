@@ -1,3 +1,9 @@
+/**
+ * 
+ * @param {String} type 消息类型 sqlConErr | successCon
+ * @param {String} message 消息内容
+ * @returns 
+ */
 const Msg = function(type,message){
     const msgObj = {}
     switch(type){

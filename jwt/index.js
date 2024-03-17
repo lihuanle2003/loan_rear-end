@@ -6,7 +6,7 @@ const secretkey = 'helloworld'
 // 生成token
 const sign = (data = {}) => {
     return jwt.sign(data, secretkey, {
-        expiresIn: 60 * 60
+        expiresIn: 60*60
     })
 }
 
@@ -28,7 +28,7 @@ const verify = (req,res) => {
         if(error){
             res.send({
                 code:603,
-                message:"token失效"
+                message:"token失效,请重新登录"
             })
         }else{
             res.send({

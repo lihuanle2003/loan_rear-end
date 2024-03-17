@@ -5,7 +5,7 @@ const routesList = require("../routerGet/routeList")
 let componentArr = routesList.componentArr
 let routerArrAll = routesList.routerArrAll
 
-
+// 暂时无用
 const getNeedRouteComponent = (arr) => {
     let newArr = componentArr.filter(item => {
         // 需要的路由
@@ -17,6 +17,7 @@ const getNeedRouteComponent = (arr) => {
     return newArr
 }
 
+// 暂时无用
 const getNoNeedArr = (limit) => {
     if (limit === '1') {
         // return ['Loan']
@@ -55,11 +56,10 @@ const getDataByLimit = async (name, limit) => {
     await query().then(value => {
         needArr = value.allowComponent.split(',')
         if(needArr.indexOf('Home') === -1) needArr.unshift("Home")
-        // console.log(needArr);
+
+        //拿到权限允许的路由列表 
         arr = routerArrFilter(routerArrAll, needArr, index = undefined, arr = [])
     })
-
-    
 
     // 拿到需要等待路由数组
     // console.log(arr);
