@@ -279,8 +279,7 @@ app.post("/regisPut",(req,res)=>{
     regis.puts(req.query,res)
 })
 app.get("/getRegisData",(req,res)=>{
-    console.log(req.query);
-    regis.get()
+    regis.get(req.query,res)
 })
 
 // 开启服务器 监听
